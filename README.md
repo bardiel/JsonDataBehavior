@@ -40,7 +40,7 @@ class Group extends AppModel {
 }
 ```
 
-This way each time you call `$groups = $this->Group->find('all', array('contain' => array('User'))));`, `$groups[{n}]['User']['settings']` will be an array. 
+This way each time you call `$groups = $this->Group->find('all', array('contain' => array('User'))));`, `$groups[{n}]['User']['settings']` will be an array. Also any associated Model with User and it's associated Models and so on will be decoded. 
 
 # Methods
 ## JsonData::decode(&$data, $modelName = null)
